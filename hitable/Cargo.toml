@@ -1,0 +1,9 @@
+[package]
+name = "hitable"
+version = "0.1.0"
+authors = ["ryhig"]
+edition = "2018"
+
+[dependencies]
+ray_lib = { path = "../ray_lib" }
+vec_lib = { path = "../vec_lib" }

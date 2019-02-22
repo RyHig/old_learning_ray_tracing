@@ -1,0 +1,19 @@
+[[package]]
+name = "hitable"
+version = "0.1.0"
+dependencies = [
+ "ray_lib 0.1.0",
+ "vec_lib 0.1.0",
+]
+
+[[package]]
+name = "ray_lib"
+version = "0.1.0"
+dependencies = [
+ "vec_lib 0.1.0",
+]
+
+[[package]]
+name = "vec_lib"
+version = "0.1.0"
+

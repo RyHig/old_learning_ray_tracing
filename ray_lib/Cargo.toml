@@ -1,0 +1,8 @@
+[package]
+name = "ray_lib"
+version = "0.1.0"
+authors = ["ryhig"]
+edition = "2018"
+
+[dependencies]
+vec_lib = { path = "../vec_lib" }
