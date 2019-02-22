@@ -1,4 +1,2 @@
-./ray_lib/*/target
-./vec_lib/*/target
-./hitable/*/target
+*/target
 **/*.rs.bk
