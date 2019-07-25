@@ -36,7 +36,7 @@ impl Vector3 {
         f64::sqrt(self.0 * self.0 + self.1 * self.1 + self.2 * self.2)
     }
     pub fn squared_length(&mut self) -> f64 {
-        self.0*self.0 + self.1*self.1 + self.2 * self.2
+        self.0 * self.0 + self.1 * self.1 + self.2 * self.2
     }
     pub fn make_unit_vector(&mut self) -> Vector3 {
         let div = 1.0 / self.length();
@@ -92,6 +92,7 @@ impl ops::Mul<Vector3> for Vector3 {
 }
 impl ops::Mul<f64> for Vector3 {
     type Output = Vector3;
+
     fn mul(self, _rhs: f64) -> Vector3 {
         Vector3(self.0 * _rhs,
                 self.1 * _rhs,
@@ -100,6 +101,7 @@ impl ops::Mul<f64> for Vector3 {
 }
 impl ops::Mul<Vector3> for f64 {
     type Output = Vector3;
+
     fn mul(self, _rhs: Vector3) -> Vector3 {
         Vector3(self * _rhs.0,
                 self * _rhs.1,

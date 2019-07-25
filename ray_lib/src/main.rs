@@ -7,8 +7,8 @@ fn hit_sphere(center: Vector3, radius: f64, mut r: Ray) -> f64 {
     let mut a_dot = r.direction();
     let a = a_dot.dot(a_dot);
     let b = 2.0 * oc.dot(a_dot);
-    let c = oc.dot(oc) - radius*radius;
-    let discriminant = b*b - 4.0 *a*c;
+    let c = oc.dot(oc) - radius * radius;
+    let discriminant = b * b - 4.0 *a*c;
     if discriminant < 0.0 {
         -1.0
     } else {
