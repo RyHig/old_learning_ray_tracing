@@ -2,10 +2,12 @@ use std::f64;
 use std::ops;
 
 #[derive(Clone, Copy, Debug)]
-
-pub struct Vector3(pub f64, pub f64, pub f64);
+pub struct Vector3(f64, f64, f64);
 
 impl Vector3 {
+    pub fn new(x: f64, y: f64, z: f64) -> Vector3 {
+        Vector3(x, y, z)
+    }
     pub fn dot(&mut self, other: Vector3) -> f64 {
         self.0 * other.0 + self.1 * other.1 + self.2 * other.2
     }
@@ -33,7 +35,7 @@ impl Vector3 {
         self.2
     }
     pub fn length(&mut self) -> f64 {
-        f64::sqrt(self.0 * self.0 + self.1 * self.1 + self.2 * self.2)
+        f64::sqrt(Vector3::squared_length(self))
     }
     pub fn squared_length(&mut self) -> f64 {
         self.0 * self.0 + self.1 * self.1 + self.2 * self.2
